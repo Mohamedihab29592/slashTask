@@ -17,7 +17,7 @@ class DummyDataGenerator {
           id: 1001,
           productId: 1,
           price: 295,
-          quantity: 50,
+          quantity: 4,
           inStock: true,
           productVarientImages: ['assets/item1.jpg','assets/item2.jpg','assets/item3.jpg',],
           productPropertiesValues: [
@@ -33,9 +33,9 @@ class DummyDataGenerator {
         ),
         ProductVariation(
           id: 1002,
-          productId: 1,
+          productId: 2,
           price: 295,
-          quantity: 50,
+          quantity: 0,
           inStock: true,
           productVarientImages: ['assets/item4.jpg','assets/item5.jpg','assets/item6.jpg',],
           productPropertiesValues: [
@@ -49,9 +49,9 @@ class DummyDataGenerator {
         ),
         ProductVariation(
           id: 1003,
-          productId: 1,
+          productId: 3,
           price: 295,
-          quantity: 50,
+          quantity: 2,
           inStock: true,
           productVarientImages: ['assets/item7.jpg','assets/item8.jpg','assets/item9.jpg',],
           productPropertiesValues: [

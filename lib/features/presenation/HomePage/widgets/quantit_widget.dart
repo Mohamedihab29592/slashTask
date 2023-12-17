@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class QuantityWidget extends StatefulWidget {
-  const QuantityWidget({super.key});
+  const QuantityWidget({super.key,required this.maxQuantity, required this.isStock});
+  final int maxQuantity;
+  final bool isStock;
 
   @override
   State<QuantityWidget> createState() => _QuantityWidgetState();
@@ -12,9 +14,11 @@ class _QuantityWidgetState extends State<QuantityWidget> {
 
 
   void incrementQuantity() {
-    setState(() {
-      quantity++;
-    });
+    if (quantity < widget.maxQuantity&& widget.isStock ) {
+      setState(() {
+        quantity++;
+      });
+    }
   }
 
   void decrementQuantity() {
@@ -54,7 +58,7 @@ class _QuantityWidgetState extends State<QuantityWidget> {
               const SizedBox(width: 10),
               Align(
                 alignment: Alignment.center,
-                child: Text('$quantity',
+                child: Text(widget.isStock?'$quantity':'0',
                     style: const TextStyle(
                       fontSize: 13,
                       decoration: TextDecoration.underline,
