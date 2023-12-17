@@ -159,12 +159,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 dec: sampleProduct.description,
               ),
               const SizedBox(height: 30),
-              QuantityWidget(maxQuantity: quantity, isStock: isStockAvailable(
-                selectedColor,
-                selectedSize,
-                sampleProduct.availableProperties,
-              ),),
+              Row(
+                children: [
+                  QuantityWidget(maxQuantity: quantity, isStock: isStockAvailable(
+                    selectedColor,
+                    selectedSize,
+                    sampleProduct.availableProperties,
+
+
+                  ),),
+                  const Spacer(),
+
+                  Text('Available $quantity in Stock')
+                ],
+              ),
               const SizedBox(height: 20),
+
+
               AddToCartButton(
                 isStock: isStockAvailable(
                   selectedColor,
